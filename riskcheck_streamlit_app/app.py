@@ -42,7 +42,25 @@ st.caption(
 
 
 # =========================================================
-# HELPERS
+# SECRETS CHECK
+# =========================================================
+
+REQUIRED_SECRET_SECTIONS = ["databricks", "databricks_sql", "retraining", "email"]
+
+
+def get_missing_secrets() -> list[str]:
+    return [s for s in REQUIRED_SECRET_SECTIONS if s not in st.secrets]
+
+
+missing_secret_sections = get_missing_secrets()
+if missing_secret_sections:
+    with st.expander("⚠️ Configuration Required: Secrets Not Configured", expanded=True):
+        st.warning(
+            f"Missing secret section(s): `[{', '.join(missing_secret_sections)}]`.\n\n"
+            "If running on **Streamlit Community Cloud**, go to your app dashboard: "
+            "**App Settings → Secrets** and paste your configuration.\n\n"
+            "If running **locally**, ensure `.streamlit/secrets.toml` exists."
+        )
 # =========================================================
 
 def read_upload(uploaded) -> pd.DataFrame:
@@ -61,10 +79,13 @@ def read_upload(uploaded) -> pd.DataFrame:
     )
 
 
+
+
 def cfg(section):
     if section not in st.secrets:
         raise RuntimeError(
-            f"Missing [{section}] in .streamlit/secrets.toml"
+            f"Missing [{section}] in .streamlit/secrets.toml (or Streamlit Cloud Secrets). "
+            f"Please configure [{section}] in your secrets."
         )
 
     return st.secrets[section]
@@ -390,7 +411,12 @@ if uploads:
             "file(s) ready for scoring."
         )
 
-        if st.button(
+        if missing_secret_sections:
+            st.error(
+                f"❌ Cannot score batches: Required secret section(s) `[{', '.join(missing_secret_sections)}]` "
+                "are missing. Please configure them in **Streamlit Community Cloud → App Settings → Secrets**."
+            )
+        elif st.button(
             "Score invoice batches",
             type="primary",
             width="stretch",
