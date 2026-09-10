@@ -1,0 +1,34 @@
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+**/venv/
+**/.venv/
+
+# Streamlit secrets (CRITICAL: Do NOT commit secrets to public repos)
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
+
+# Python cache & bytecode
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary and local files
+scratch/
+**/scratch/
+.system_generated/
+*.log
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp

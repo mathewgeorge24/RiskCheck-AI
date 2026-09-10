@@ -1,0 +1,11 @@
+invoice_id,invoice_amount,submission_hour,supplier_invoice_count_30d,supplier_avg_amount_90d,invoice_amount_zscore,duplicate_invoice_flag,split_invoice_flag,late_night_submission_flag,supplier_age_days,supplier_risk_score,blacklisted_flag,avg_invoice_amount,annual_budget,ocr_total_extracted,image_tamper_flag,amount_to_supplier_90d_avg_ratio,amount_to_supplier_avg_ratio,amount_diff_supplier_90d_avg,supplier_age_years,invoice_day_of_week,weekend_invoice_flag,outside_business_hours_flag,invoice_to_department_budget_ratio,log_invoice_amount,image_metadata_available_flag,invoice_ocr_amount_diff,invoice_ocr_relative_diff,payment_terms_NET30,payment_terms_NET60,payment_terms_NET90,invoice_type_GOODS,invoice_type_SERVICES
+INV-DEMO-001,420.0,10,8,460.0,-0.35,0,0,0,1850,0.08,0,455.0,850000,420.0,0,0.913,0.9231,-40.0,5.07,2,0,0,0.000494,6.040255,1,0.0,0.0,1,0,0,0,1
+INV-DEMO-002,1250.0,14,12,1180.0,0.22,0,0,0,2400,0.14,0,1210.0,1200000,1250.0,0,1.0593,1.0331,70.0,6.58,3,0,0,0.001042,7.130899,1,0.0,0.0,0,1,0,1,0
+INV-DEMO-003,3100.0,19,5,2450.0,1.15,0,1,0,980,0.42,0,2550.0,600000,3098.0,0,1.2653,1.2157,650.0,2.68,5,0,1,0.005167,8.039157,1,2.0,0.0006,1,0,0,0,1
+INV-DEMO-004,6900.0,23,2,2800.0,2.75,0,1,1,420,0.67,0,2950.0,400000,6875.0,0,2.4643,2.339,4100.0,1.15,6,1,1,0.01725,8.839277,1,25.0,0.0036,0,1,0,0,1
+INV-DEMO-005,9800.0,1,1,2100.0,3.9,1,1,1,120,0.89,1,2200.0,300000,9050.0,1,4.6667,4.4545,7700.0,0.33,7,1,1,0.032667,9.190138,1,750.0,0.0765,0,0,1,1,0
+INV-DEMO-006,560.0,9,15,610.0,-0.18,0,0,0,3100,0.05,0,590.0,1500000,560.0,0,0.918,0.9492,-50.0,8.49,1,0,0,0.000373,6.327937,1,0.0,0.0,1,0,0,1,0
+INV-DEMO-007,4200.0,22,3,2300.0,2.1,0,0,1,640,0.58,0,2400.0,500000,4190.0,1,1.8261,1.75,1900.0,1.75,4,0,1,0.0084,8.34284,1,10.0,0.0024,0,1,0,1,0
+INV-DEMO-008,15000.0,2,1,3200.0,4.4,1,0,1,75,0.95,1,3400.0,350000,13200.0,1,4.6875,4.4118,11800.0,0.21,7,1,1,0.042857,9.615805,0,1800.0,0.12,0,0,1,0,1
+INV-DEMO-009,2100.0,11,7,2050.0,0.12,0,0,0,1500,0.2,0,2080.0,900000,2100.0,0,1.0244,1.0096,50.0,4.11,3,0,0,0.002333,7.649693,1,0.0,0.0,0,1,0,0,1
+INV-DEMO-010,7600.0,0,2,2500.0,3.2,0,1,1,260,0.78,0,2650.0,420000,7100.0,1,3.04,2.8679,5100.0,0.71,6,1,1,0.018095,8.935904,1,500.0,0.0658,0,0,1,1,0
